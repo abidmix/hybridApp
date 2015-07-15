@@ -1,0 +1,14 @@
+{{#unless isEditing}}
+<article id="lead">
+<h1>{{model.fullName}}</h1>
+ {{#link-to  'activities.index.show.edit' model}} Edit{{/link-to}}
+
+
+<p>Name: {{model.code}}</p>
+<p>
+Description: {{model.description}}</p>
+</article>
+{{/unless}}
+{{outlet}}
+
+

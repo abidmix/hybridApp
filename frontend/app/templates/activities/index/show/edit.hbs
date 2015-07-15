@@ -1,0 +1,25 @@
+<article id="lead">
+
+<form>
+<fieldset>
+<dl>
+ <dt> <label> Code</label></dt>
+ <dd>{{input value=model.code}}</dd>
+ </dl>
+<dl>
+ <dt> <label> Description</label></dt>
+ <dd>{{input value=model.description}}</dd>
+ </dl>
+ </fieldset>
+        
+       <input {{action 'saveChanges'}} value="Save Changes" type="submit"/>
+	   {{#if showUnsavedMessage}}
+  <p class="unsaved">unsaved changes</p>
+{{/if}}
+	   {{#if isSaving}}
+  <p class="saving">saving..</p>
+{{/if}}
+     <a href="#" {{action 'cancel'}} class="cancel">Cancel</a>
+	 <a href='#' {{action 'delete'}} >Delete </a>
+ </form>
+ </article>

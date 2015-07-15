@@ -1,0 +1,15 @@
+
+<article id="leads">
+<h1> Activities   {{#link-to 'activities.index.new' }} New {{/link-to}}</h1>
+ {{input value=filterText }}
+<ul>
+{{#each activities as |activity|}}
+<li> {{#link-to 'activities.index.show'  activity }}{{activity.code}}&nbsp;{{ activity.description}} {{activity.fullName}} {{/link-to}}
+</li>
+{{/each}}
+</ul>
+</article>
+<article id="lead">
+{{outlet}}
+</article>
+ 

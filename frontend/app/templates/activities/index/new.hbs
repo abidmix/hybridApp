@@ -1,0 +1,19 @@
+<article id="lead">
+
+<form {{action "createActivity" on="submit"}} >
+<fieldset>
+<dl>
+ <dt> <label> Code</label></dt>
+ <dd>{{input value=model.code}}</dd>
+ </dl>
+<dl>
+ <dt> <label> Description</label></dt>
+ <dd>{{input value=model.description}}</dd>
+ </dl>
+ </fieldset>
+
+       <input {{action 'createActivity'}} value="Save Changes" type="submit"/>
+     <a href="#" {{action 'cancel'}} class="cancel">Cancel</a>
+	
+ </form>
+ </article>
